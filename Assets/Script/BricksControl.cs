@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class BricksControl : MonoBehaviour
 {
    public UIManager ui;
@@ -19,4 +19,10 @@ public class BricksControl : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void OnTriggerEnter2D (Collider2D other)
+    {
+        
+    }
 }
+

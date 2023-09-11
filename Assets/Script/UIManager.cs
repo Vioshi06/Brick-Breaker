@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     int score = 0;
@@ -26,8 +26,11 @@ public class UIManager : MonoBehaviour
 
     public void IncrementScore()
     {
-        score++;
+        score = score + 5;
         UpdateScoreText();
+        if (score >= 100){
+            SceneManager.LoadScene("WinScene");
+        }
     }
 
     void UpdateScoreText()
